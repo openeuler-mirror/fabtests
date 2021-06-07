@@ -1,11 +1,11 @@
 Name:                fabtests
 Version:             1.6.1
-Release:             3
+Release:             4
 Summary:             libfabric API test suite
 License:             BSD and (BSD or GPLv2) and MIT
 Url:                 https://github.com/ofiwg/fabtests
 Source:              https://github.com/ofiwg/fabtests/releases/download/v%{version}/fabtests-%{version}.tar.bz2
-BuildRequires:       libfabric-devel >= %{version} valgrind-devel gcc
+BuildRequires:       libfabric-devel >= %{version} valgrind-devel gcc git
 %description
 Fabtests provides a set of examples that uses libfabric
 
@@ -36,5 +36,9 @@ Documentation for user of fabtests.
 %{_mandir}/man7/*
 
 %changelog
+* Wed Jun 2 2021 baizhonggui <baizhonggui@huawei.com> - 1.6.1-4
+- Fix building error: /usr/bin/git: No such file or directory
+- Add git in BuildRequires
+
 * Tue Apr 21 2020 Jeffery.Gao <gaojianxing@huawei.com> - 1.6.1-3
 - Package init
